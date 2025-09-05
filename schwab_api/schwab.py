@@ -686,6 +686,9 @@ class Schwab(SessionManager):
     def get_account_info_v2(self):
         account_info = dict()
         self.update_token(token_type='api')
+        # somewhere around 2025-08-25, this change became necessary
+        if 'schwab-client-account' in self.headers:
+            self.headers['Schwab-Client-Ids'] = self.headers['schwab-client-account']
         r = requests.get(urls.positions_v2(), headers=self.headers)
         response = json.loads(r.text)
         for account in response['accounts']:
