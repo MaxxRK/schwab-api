@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: pypi
-      url: https://pypi.org/p/schwab-api
+      url: https://pypi.org/p/schwab-api2
     permissions:
       id-token: write
     if: github.event_name == 'push'
