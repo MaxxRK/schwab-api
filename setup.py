@@ -27,20 +27,3 @@ setuptools.setup(
         "Programming Language :: Python :: 3.9",
     ],
 )
-from setuptools import setup
-
-setup(
-    name="schwab-api2",
-    version="0.1.0",
-    author="Your Name",
-    packages=["schwab_api2"],
-    description="Your package description",
-    long_description=open("README.md").read(),
-    long_description_content_type="text/markdown",
-    url="https://github.com/MaxxRK/schwab-api",
-    classifiers=[
-        "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: MIT License",
-    ],
-    python_requires=">=3.7",
-)
